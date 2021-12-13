@@ -15,6 +15,9 @@ import retos_ciclo4.retos_ciclo4.modelo.User;
  */
 public interface InterfaceUser extends MongoRepository<User, Integer>{
     Optional<User> findByEmail(String email);
-	    Optional<User> findByEmailAndPassword(String email,String password);
     
+    Optional<User> findByEmailAndPassword(String email,String password);
+    
+    //Para seleccionar el usuario con el id maximo
+    Optional<User> findTopByOrderByIdDesc();
 }

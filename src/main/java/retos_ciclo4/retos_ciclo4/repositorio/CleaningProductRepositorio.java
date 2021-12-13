@@ -26,19 +26,19 @@ public class CleaningProductRepositorio {
         return repository.findAll();
     }
 
-    public Optional<CleaningProduct> getClothe(Integer id) {
+    public Optional<CleaningProduct> getCleaningProduct(Integer id) {
         return repository.findById(id);
     }
     
-    public CleaningProduct create(CleaningProduct clothe) {
-        return repository.save(clothe);
+    public CleaningProduct create(CleaningProduct cleaningProduct) {
+        return repository.save(cleaningProduct);
     }
 
-    public void update(CleaningProduct clothe) {
-        repository.save(clothe);
+    public void update(CleaningProduct cleaningProduct) {
+        repository.save(cleaningProduct);
     }
     
-    public void delete(CleaningProduct clothe) {
-        repository.delete(clothe);
+    public void delete(CleaningProduct cleaningProduct) {
+        repository.delete(cleaningProduct);
     }
 }

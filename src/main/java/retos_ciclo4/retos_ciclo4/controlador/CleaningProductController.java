@@ -40,8 +40,8 @@ public class CleaningProductController {
     }
 
     @GetMapping("/{id}")
-    public Optional<CleaningProduct> getClothe(@PathVariable("id") Integer id) {
-        return accessoryService.getClothe(id);
+    public Optional<CleaningProduct> getCleaningProduct(@PathVariable("id") Integer id) {
+        return accessoryService.getCleaningProduct(id);
     }
 
     @PostMapping("/new")

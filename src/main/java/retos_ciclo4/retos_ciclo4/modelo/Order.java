@@ -6,6 +6,7 @@
 package retos_ciclo4.retos_ciclo4.modelo;
 
 import java.util.Date;
+import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,23 +17,28 @@ import org.springframework.data.mongodb.core.mapping.Document;
  *
  * @author LESLY SANTAMARIA
  */
-@Document(collection = "usuarios")
+
+@Document(collection = "orders")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+
+public class Order {
     
-    @Id
-    private Integer id;
-    private String identification;
-    private String name;
-    private Date birthtDay;
-    private String monthBirthtDay;
-    private String address;
-    private String cellPhone;
-    private String email;
-    private String password;
-    private String zone;
-    private String type;
-    
+    public static String PENDING = "Pendiente";
+    public static String APROVED = "Aprobada";
+    public static String REJECTED = "Rechazada";
+
+
+@Id
+
+private Integer id;
+private Date registerDay;
+private String status;
+private User salesMan;
+
+private Map<Integer, CleaningProduct> products;
+private Map<Integer, Integer> quantities;
+
 }
+

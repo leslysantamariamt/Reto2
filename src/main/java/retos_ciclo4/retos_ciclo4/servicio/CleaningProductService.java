@@ -26,8 +26,8 @@ public class CleaningProductService {
         return clotheRepository.getAll();
     }
 
-    public Optional<CleaningProduct> getClothe(Integer id) {
-        return clotheRepository.getClothe(id);
+    public Optional<CleaningProduct> getCleaningProduct(Integer id) {
+        return clotheRepository.getCleaningProduct(id);
     }
 
     public CleaningProduct create(CleaningProduct accesory) {
@@ -41,7 +41,7 @@ public class CleaningProductService {
     public CleaningProduct update(CleaningProduct accesory) {
 
         if (accesory.getId() != null) {
-            Optional<CleaningProduct> accesoryDb = clotheRepository.getClothe(accesory.getId());
+            Optional<CleaningProduct> accesoryDb = clotheRepository.getCleaningProduct(accesory.getId());
             if (!accesoryDb.isEmpty()) {
 
                 if (accesory.getBrand() != null) {
@@ -80,7 +80,7 @@ public class CleaningProductService {
     }
 
     public boolean delete(Integer id) {
-        Boolean aBoolean = getClothe(id).map(accesory -> {
+        Boolean aBoolean = getCleaningProduct(id).map(accesory -> {
             clotheRepository.delete(accesory);
             return true;
         }).orElse(false);

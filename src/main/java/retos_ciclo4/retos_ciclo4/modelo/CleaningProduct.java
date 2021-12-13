@@ -31,7 +31,7 @@ public class CleaningProduct {
     private String description;
     private Double price;
     private boolean availability = true;
-    private Integer quantity;
+    private int quantity;
     private String photography;
 
 }
