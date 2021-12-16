@@ -33,6 +33,5 @@ public class User {
     private String email;
     private String password;
     private String zone;
-    private String type;
-    
+    private String type;    
 }

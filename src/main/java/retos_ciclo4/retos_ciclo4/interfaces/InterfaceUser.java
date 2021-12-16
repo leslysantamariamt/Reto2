@@ -5,6 +5,8 @@
  */
 package retos_ciclo4.retos_ciclo4.interfaces;
 
+import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import retos_ciclo4.retos_ciclo4.modelo.User;
@@ -20,4 +22,7 @@ public interface InterfaceUser extends MongoRepository<User, Integer>{
     
     //Para seleccionar el usuario con el id maximo
     Optional<User> findTopByOrderByIdDesc();
+    List<User> findBybirthtDay(Date date);
+    List<User> findByMonthBirthtDay(String monthBirthtDay);
+    
 }

@@ -105,4 +105,8 @@ public class UserService {
             return usuario.get();
         }
     }
+    //Reto 5
+    public List<User> birthtDayList(String monthBirthtDay) {
+        return userRepository.birthtDayList(monthBirthtDay);
+    }
 }
